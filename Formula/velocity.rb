@@ -1,15 +1,26 @@
 class Velocity < Formula
   desc "CLI for the Velocity Go web framework"
   homepage "https://github.com/velocitykode/velocity-cli"
-  url "https://github.com/velocitykode/velocity-cli/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "2d4209bba010d38604535cd9cf4b20de612af55162b8f6a4ce1a31cb3f928e05"
+  version "0.1.1"
   license "MIT"
-  head "https://github.com/velocitykode/velocity-cli.git", branch: "main"
 
-  depends_on "go" => :build
+  on_macos do
+    on_arm do
+      url "https://github.com/velocitykode/velocity-cli/releases/download/v0.1.1/velocity-darwin-arm64.tar.gz"
+      sha256 "73bea10efcb70abbade066e24069344dff9cb6da65ce20f353ad496b9295a45e"
+    end
+    on_intel do
+      url "https://github.com/velocitykode/velocity-cli/releases/download/v0.1.1/velocity-darwin-amd64.tar.gz"
+      sha256 "a10ac6c8827250f4ac90cc3de88ac581c7eb7ebd23d3dde7508c2c5d91ab25ca"
+    end
+  end
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w"), "-o", bin/"velocity"
+    if Hardware::CPU.arm?
+      bin.install "velocity-darwin-arm64" => "velocity"
+    else
+      bin.install "velocity-darwin-amd64" => "velocity"
+    end
   end
 
   test do
