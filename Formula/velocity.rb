@@ -1,17 +1,17 @@
 class Velocity < Formula
   desc "CLI for the Velocity Go web framework"
   homepage "https://github.com/velocitykode/velocity-cli"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/velocitykode/velocity-cli/releases/download/v0.1.2/velocity-darwin-arm64.tar.gz"
-      sha256 "aaf0d2102e59424cc9911a13a5a9ea651e1d5041c0c0b7366305e387e0a20bd5"
+      url "https://github.com/velocitykode/velocity-cli/releases/download/v0.1.3/velocity-darwin-arm64.tar.gz"
+      sha256 "9cb6e3bcd87bf04ad28412fe6e64715e2e5be7b962db8303589c5d353fed4918"
     end
     on_intel do
-      url "https://github.com/velocitykode/velocity-cli/releases/download/v0.1.2/velocity-darwin-amd64.tar.gz"
-      sha256 "2457c7fffa06646284aefad73a292d10ee44544b93aa40d69fbd0fe487948dd6"
+      url "https://github.com/velocitykode/velocity-cli/releases/download/v0.1.3/velocity-darwin-amd64.tar.gz"
+      sha256 "277b2a10c9b196e072c445275796ce879538e2ae093abfbfaaba0b79385f946e"
     end
   end
 
