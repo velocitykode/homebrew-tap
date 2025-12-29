@@ -1,8 +1,8 @@
 class Velocity < Formula
   desc "CLI for the Velocity Go web framework"
   homepage "https://github.com/velocitykode/velocity-cli"
-  url "https://github.com/velocitykode/velocity-cli/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "6809b80e1b561e036b78f73d003bac00105cc015b46cfc3234a496a928bc48c5"
+  url "https://github.com/velocitykode/velocity-cli/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "2d4209bba010d38604535cd9cf4b20de612af55162b8f6a4ce1a31cb3f928e05"
   license "MIT"
   head "https://github.com/velocitykode/velocity-cli.git", branch: "main"
 
