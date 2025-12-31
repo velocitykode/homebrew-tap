@@ -5,13 +5,13 @@
 class Velocity < Formula
   desc "CLI for the Velocity Go web framework"
   homepage "https://github.com/velocitykode/velocity-cli"
-  version "0.5.0"
+  version "0.5.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/velocitykode/velocity-cli/releases/download/v0.5.0/velocity-darwin-amd64.tar.gz"
-      sha256 "0035a77a1448b32f4f88a0394d58e8e1773546a3b5811a11a03432861c8ac4d9"
+      url "https://github.com/velocitykode/velocity-cli/releases/download/v0.5.1/velocity-darwin-amd64.tar.gz"
+      sha256 "420faa0159e064e34f90b3b7328cf05513339a30415a6d078fcbf4e8501ed5e4"
 
       def install
         if Hardware::CPU.arm?
@@ -22,8 +22,8 @@ class Velocity < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/velocitykode/velocity-cli/releases/download/v0.5.0/velocity-darwin-arm64.tar.gz"
-      sha256 "66cef5a94075c4f1afccdc0ad15e7423eba7b47f328bf7aa7b090b35fd7afad3"
+      url "https://github.com/velocitykode/velocity-cli/releases/download/v0.5.1/velocity-darwin-arm64.tar.gz"
+      sha256 "fd67809fce4367a53350160c83bf1435d9a393b9b916205e81ab6e065f2c2fec"
 
       def install
         if Hardware::CPU.arm?
@@ -37,8 +37,8 @@ class Velocity < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/velocitykode/velocity-cli/releases/download/v0.5.0/velocity-linux-amd64.tar.gz"
-      sha256 "560222156dd95457be07e28bcfd30f321c6df010b713a4adfcacc525f9523177"
+      url "https://github.com/velocitykode/velocity-cli/releases/download/v0.5.1/velocity-linux-amd64.tar.gz"
+      sha256 "5775b697e5a109ba31d35d9a3cc071c50ca9de5fba03b2c7a08696ea3af9e889"
       def install
         if Hardware::CPU.arm?
           bin.install "velocity-darwin-arm64" => "velocity"
@@ -48,8 +48,8 @@ class Velocity < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/velocitykode/velocity-cli/releases/download/v0.5.0/velocity-linux-arm64.tar.gz"
-      sha256 "beca585e653ecc33d4bb899ee9dba0e3264c9af3f163357d0426c9a683c4f188"
+      url "https://github.com/velocitykode/velocity-cli/releases/download/v0.5.1/velocity-linux-arm64.tar.gz"
+      sha256 "826c064731d8371fb125f30239ae3d82b76b39600705ae951200f2cc426ae0c1"
       def install
         if Hardware::CPU.arm?
           bin.install "velocity-darwin-arm64" => "velocity"
